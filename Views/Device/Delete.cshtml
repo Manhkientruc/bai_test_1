@@ -1,0 +1,30 @@
+@model bai_test_1.Models.Device
+
+@{
+    ViewData["Title"] = "Xoá thiết bị";
+}
+
+<h1>Xác nhận xoá thiết bị</h1>
+
+<h3>Bạn có chắc muốn xoá thiết bị này không?</h3>
+
+<div class="border p-3 mt-3">
+    <dl class="row">
+        <dt class="col-sm-3">Tên thiết bị</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Loại</dt>
+        <dd class="col-sm-9">@Model.Type</dd>
+
+        <dt class="col-sm-3">Trạng thái</dt>
+        <dd class="col-sm-9">@Model.Status</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group mt-3">
+        <input type="submit" value="Xoá" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Huỷ bỏ</a>
+    </div>
+</form>
