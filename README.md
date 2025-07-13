@@ -38,13 +38,15 @@ bai_test_1/
 
 ## Hướng dẫn chạy
 
-### 1. Chạy Docker Compose
-### 2. Chạy MySQL container
-        docker compose up -d
-### 3. Apply migration và chạy web:
+### 1. Cài đặt MySQL và tạo database:
+        CREATE DATABASE device_db;
+        CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'SuperSecure_456!';
+        GRANT ALL PRIVILEGES ON device_db.* TO 'devuser'@'localhost';
+
+### 2. Apply migration và chạy web:
         dotnet ef database update
         dotnet run
-        
+
 ### Ý tưởng mở rộng
     Tìm kiếm thiết bị theo tên
     Phân loại theo trạng thái
