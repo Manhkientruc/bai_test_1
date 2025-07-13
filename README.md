@@ -38,7 +38,27 @@ bai_test_1/
 
 ## Hướng dẫn chạy
 
-### 1. Cài đặt MySQL và tạo database:
+### 0. Cài đặt MySQL 
+#### Với Windows (sử dụng XAMPP):
+        1. Tải XAMPP tại: https://www.apachefriends.org/index.html
+        2. Cài đặt và mở **XAMPP Control Panel**
+        3. Start module **MySQL**
+        4. Truy cập http://localhost/phpmyadmin để kiểm tra MySQL đã chạy thành công
+
+#### Với Linux (Ubuntu/Debian):
+        sudo apt update
+        sudo apt install mysql-server
+        sudo systemctl start mysql
+        sudo systemctl enable mysql
+        sudo mysql
+
+### 1. Tạo database:
+#### Truy cập phpMyAdmin (Windows) hoặc dùng terminal (Linux) rồi chạy:
+##### Nếu là với Window thì cần khởi động MySQL trong Xampp rồi chuyển vào phần SQL rồi dán đoạn mã dưới đây vào rồi bấm "Go"
+        CREATE DATABASE device_db;
+        CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'SuperSecure_456!';
+        GRANT ALL PRIVILEGES ON device_db.* TO 'devuser'@'localhost';
+##### Nếu là với Linux thì cần vào terminal và gõ lệnh 'mysql -u root -p' rồi dán đoạn mã dưới đây vào
         CREATE DATABASE device_db;
         CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'SuperSecure_456!';
         GRANT ALL PRIVILEGES ON device_db.* TO 'devuser'@'localhost';
@@ -48,10 +68,10 @@ bai_test_1/
         dotnet run
 
 ### Ý tưởng mở rộng
-    Tìm kiếm thiết bị theo tên
-    Phân loại theo trạng thái
-    Export danh sách thành Excel/PDF
-    Chuyển sang kiến trúc REST API + frontend riêng (React/Vue)
+        Tìm kiếm thiết bị theo tên
+        Phân loại theo trạng thái
+        Export danh sách thành Excel/PDF
+        Chuyển sang kiến trúc REST API + frontend riêng (React/Vue)
 
 ### Tác giả
 Mạnh Cao Duy – Ứng viên TTS AI @ NextX
