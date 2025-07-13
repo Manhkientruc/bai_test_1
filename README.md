@@ -62,6 +62,7 @@ bai_test_1/
         CREATE DATABASE device_db;
         CREATE USER 'devuser'@'localhost' IDENTIFIED BY 'SuperSecure_456!';
         GRANT ALL PRIVILEGES ON device_db.* TO 'devuser'@'localhost';
+##### Sau đó thì gõ 'exit' để thoát mysql
 
 ### 2. Apply migration và chạy web:
         dotnet ef database update
