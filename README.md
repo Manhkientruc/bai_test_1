@@ -44,13 +44,7 @@ bai_test_1/
 ### 3. Apply migration và chạy web:
         dotnet ef database update
         dotnet run
-### Những vấn đề từng gặp
-|Vấn đề                               |  Cách xử lý                                                                                |
-|-------------------------------------|--------------------------------------------------------------------------------------------|
-|dotnet ef không nhận command	      |  Cài tool: dotnet tool install --global dotnet-ef + export PATH="$PATH:$HOME/.dotnet/tools"|
-|Conflict giữa EF Core 8 và Pomelo	  |  Đảm bảo chọn đúng version: Pomelo 8.0.3 tương thích EF Core 8.0.13                        |
-|Port 3306 bị chiếm khi chạy Docker	  |  Tắt MySQL host: sudo systemctl stop mysql                                                 |
-
+        
 ### Ý tưởng mở rộng
     Tìm kiếm thiết bị theo tên
     Phân loại theo trạng thái
