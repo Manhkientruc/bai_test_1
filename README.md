@@ -27,15 +27,6 @@ Database `device_db` gồm 1 bảng chính:
 
 Sử dụng code-first migration từ EF Core để khởi tạo & cập nhật schema.
 
-### Cấu trúc thư mục
-bai_test_1/
-├── Controllers/DeviceController.cs
-├── Data/AppDbContext.cs
-├── Models/Device.cs
-├── Views/Device/*.cshtml
-├── appsettings.json
-└── Program.cs
-
 ## Hướng dẫn chạy
 
 ### 0. Cài đặt MySQL 
@@ -52,6 +43,10 @@ bai_test_1/
         sudo systemctl enable mysql
         sudo mysql
 
+### 0.5. Cài đặt .NET
+#### Với Windows 
+        1. Tải .NET tại: https://dotnet.microsoft.com/en-us/download (tải bản 8.0 tại thời điểm làm dự án)
+        2. Cài đặt và vào cmd để kiểm tra bằng 'dotnet --version'
 ### 1. Tạo database:
 #### Truy cập phpMyAdmin (Windows) hoặc dùng terminal (Linux) rồi chạy:
 ##### Nếu là với Window thì cần khởi động MySQL trong Xampp rồi chuyển vào phần SQL rồi dán đoạn mã dưới đây vào rồi bấm "Go"
