@@ -47,6 +47,13 @@ Sử dụng code-first migration từ EF Core để khởi tạo & cập nhật 
 #### Với Windows 
         1. Tải .NET tại: https://dotnet.microsoft.com/en-us/download (tải bản 8.0 tại thời điểm làm dự án)
         2. Cài đặt và vào cmd để kiểm tra bằng 'dotnet --version'
+#### Với Linux
+        1. sudo apt install -y wget apt-transport-https software-properties-common
+        2. wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb
+        3. sudo dpkg -i packages-microsoft-prod.deb
+        4. sudo apt update
+        5. sudo apt install -y dotnet-sdk-8.0
+
 ### 1. Tạo database:
 #### Truy cập phpMyAdmin (Windows) hoặc dùng terminal (Linux) rồi chạy:
 ##### Nếu là với Window thì cần khởi động MySQL trong Xampp rồi chuyển vào phần SQL rồi dán đoạn mã dưới đây vào rồi bấm "Go"
