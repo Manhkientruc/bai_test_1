@@ -60,6 +60,7 @@ Sử dụng code-first migration từ EF Core để khởi tạo & cập nhật 
 ##### Sau đó thì gõ 'exit' để thoát mysql
 
 ### 2. Apply migration và chạy web:
+        dotnet tool install --global dotnet-ef
         dotnet ef database update
         dotnet run
 
