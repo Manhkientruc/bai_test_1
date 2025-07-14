@@ -63,6 +63,7 @@ Sử dụng code-first migration từ EF Core để khởi tạo & cập nhật 
         dotnet tool install --global dotnet-ef
         dotnet ef database update
         dotnet run
+#### Có thể thoát IDE (Integrated Development Environment - Môi trường phát triển tích hợp) ra vào lại nếu gặp lỗi khi chạy ' dotnet ef ' và ' dotnet run ' 
 
 ### Ý tưởng mở rộng
         Tìm kiếm thiết bị theo tên
